@@ -22,4 +22,4 @@ do
 	numberArray[$j]=${numberDict[$(( $j+1 ))]}
 done
 
-printf '%s\n' "${numberArray[*]}" | sort -nr
+printf '%s\n' "${numberArray[*]}" | sort -n
