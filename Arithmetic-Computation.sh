@@ -17,7 +17,9 @@ do
 	numberDict[$i]=$((number$i))
 done
 
-for (( j=1; j<=4; j++ ))
+for (( j=0; j<=4; j++ ))
 do
-	numberArray[$j]=${numberDict[$((j+1))]}
+	numberArray[$j]=${numberDict[$(( $j+1 ))]}
 done
+
+printf '%s\n' "${numberArray[*]}" | sort -nr
