@@ -5,5 +5,5 @@ read -p "enter a value b:" b
 read -p "enter a value c:" c
 
 
-num=$(( c+a/b ))
+num=$(( a%b+c ))
 echo $num
