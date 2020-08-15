@@ -5,6 +5,7 @@ read -p "enter a value b:" b
 read -p "enter a value c:" c
 
 declare -A numberDict
+declare -a numberArray
 
 number1=$(( $a+$b*$c ))
 number2=$(( $a*$b+$c ))
@@ -14,4 +15,9 @@ number4=$(( $a%$b+$c ))
 for (( i=1; i<=4; i++ ))
 do
 	numberDict[$i]=$((number$i))
+done
+
+for (( j=1; j<=4; j++ ))
+do
+	numberArray[$j]=${numberDict[$((j+1))]}
 done
